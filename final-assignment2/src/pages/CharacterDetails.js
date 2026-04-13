@@ -4,15 +4,18 @@ import axios from 'axios';
 import { Container, Card } from 'react-bootstrap';
 
 const CharacterDetails = () => {
-  const { id } = useParams();
+  const params = useParams();
+  const id = params.id;
   const [character, setCharacter] = useState(null);
 
-  useEffect(() => {
+    useEffect(() => {
     axios.get(`https://rickandmortyapi.com/api/character/${id}`)
-      .then(res => setCharacter(res.data));
+      .then(response => setCharacter(response.data));
   }, [id]);
 
-  if (!character) return <p>Loading...</p>;
+  if (!character) {
+    return <p>Character not yet retrieved</p>;
+  }
 
   return (
     <Container>
@@ -21,11 +24,16 @@ const CharacterDetails = () => {
         <Card.Body>
           <Card.Title>{character.name}</Card.Title>
           <Card.Text>
-            Status: {character.status}<br/>
-            Species: {character.species}<br/>
-            Gender: {character.gender}<br/>
-            Origin: {character.origin.name}<br/>
-            Location: {character.location.name}
+
+            <div>
+              <ul>
+                <li>Status: {character.status}</li>
+                <li>Species: {character.species}</li>
+                <li>Gender: {character.gender}</li>
+                <li>Origin: {character.origin.name}</li>
+                <li>Location: {character.location.name}</li>
+              </ul>
+            </div>
           </Card.Text>
         </Card.Body>
       </Card>

@@ -2,7 +2,7 @@ import React from 'react';
 import { Form } from 'react-bootstrap';
 
 const Search = ({ search, setSearch }) => (
-  <Form className="my-3">
+  <Form>
     <Form.Control
       type="text"
       placeholder="Search characters..."

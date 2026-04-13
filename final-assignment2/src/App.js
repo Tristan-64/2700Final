@@ -5,6 +5,8 @@ import Footer from './components/Footer';
 import CharacterDetails from './pages/CharacterDetails';
 import Navigation from './components/Nav';
 import Header from './components/Header';
+import Search from './components/Search';
+import Info from './pages/Info';
 
 
 function App() {
@@ -12,11 +14,12 @@ function App() {
     <Router>
       <Header />
       <Navigation />
-
+      <Search />
       <div>
         <Routes>
           <Route path="/" element={<CharacterList />} />
           <Route path="/character/:id" element={<CharacterDetails />} />
+          <Route path="/pages/Info" element={<Info />} />
         </Routes>
       </div>
 

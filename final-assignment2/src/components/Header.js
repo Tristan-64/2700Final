@@ -1,12 +1,12 @@
 import React from 'react';
-import { Navbar, Container } from 'react-bootstrap';
+import { Container } from 'react-bootstrap';
 
 const Header = () => (
-  <Navbar bg="dark" variant="dark">
+  <div className = "header">
     <Container>
-      <Navbar.Brand href="/">Rick & Morty Characters</Navbar.Brand>
+      <p>Rick and Morty Characters</p>
     </Container>
-  </Navbar>
+  </div>
 );
 
 export default Header;

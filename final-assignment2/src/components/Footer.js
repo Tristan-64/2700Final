@@ -2,11 +2,11 @@ import React from 'react';
 import { Container } from 'react-bootstrap';
 
 const Footer = () => (
-  <footer className = "footer">
+  <div className = "footer">
     <Container>
-      <p>Final Assignment &copy; 2026</p>
+      <p>Final Assignment - Tristan Loiselle - 2026</p>
     </Container>
-  </footer>
+  </div>
 );
 
 export default Footer;
