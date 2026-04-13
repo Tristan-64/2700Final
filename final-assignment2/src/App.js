@@ -1,12 +1,15 @@
 import React from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import CharacterList from './components/CharacterList';
+import { BrowserRouter as Router } from 'react-router-dom';
+import { Routes } from 'react-router-dom';
+import { Route } from 'react-router-dom';
+import Characters from './components/Characters';
 import Footer from './components/Footer';
 import CharacterDetails from './pages/CharacterDetails';
 import Navigation from './components/Nav';
 import Header from './components/Header';
-import Search from './components/Search';
 import Info from './pages/Info';
+//import Search from './components/Search';
+//import SearchResults from './components/SearchResults';
 
 
 function App() {
@@ -14,10 +17,9 @@ function App() {
     <Router>
       <Header />
       <Navigation />
-      <Search />
       <div>
         <Routes>
-          <Route path="/" element={<CharacterList />} />
+          <Route path="/" element={<Characters />} />
           <Route path="/character/:id" element={<CharacterDetails />} />
           <Route path="/pages/Info" element={<Info />} />
         </Routes>

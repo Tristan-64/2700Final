@@ -4,11 +4,13 @@ import axios from 'axios';
 import { Container, Card } from 'react-bootstrap';
 
 const CharacterDetails = () => {
-  const params = useParams();
-  const id = params.id;
+  
+  //https://stackoverflow.com/questions/60998386/using-the-useparams-hook-in-react
+  const { id } = useParams();
   const [character, setCharacter] = useState(null);
 
-    useEffect(() => {
+  //https://www.freecodecamp.org/news/how-to-use-axios-with-react/
+  useEffect(() => {
     axios.get(`https://rickandmortyapi.com/api/character/${id}`)
       .then(response => setCharacter(response.data));
   }, [id]);
@@ -18,14 +20,13 @@ const CharacterDetails = () => {
   }
 
   return (
-    <Container>
+    <Container className = "characterContainer">
       <Card>
         <Card.Img src={character.image} />
         <Card.Body>
           <Card.Title>{character.name}</Card.Title>
           <Card.Text>
 
-            <div>
               <ul>
                 <li>Status: {character.status}</li>
                 <li>Species: {character.species}</li>
@@ -33,7 +34,6 @@ const CharacterDetails = () => {
                 <li>Origin: {character.origin.name}</li>
                 <li>Location: {character.location.name}</li>
               </ul>
-            </div>
           </Card.Text>
         </Card.Body>
       </Card>

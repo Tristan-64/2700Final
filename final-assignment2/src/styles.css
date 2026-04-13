@@ -1,5 +1,11 @@
+h1 {
+  padding-left: 10px;
+  padding-top: 20px;
+}
+
 .navbar {
-  background-color: grey; 
+  background-color: darkgrey; 
+  text-align: centre;
   color: white;             
 }
 
@@ -26,8 +32,24 @@ ul {
 
 
 .characterContainer {
+  padding-top: 50px;
   display: flex;
   flex-wrap: wrap;
   gap: 20px;
   justify-content: center;
+}
+
+.links {
+  padding-right: 40px;
+  padding-left: 10px;
+  color: white;   
+}
+
+.infoScreen {
+  font-size: 48px;
+  padding: 20px;
+}
+
+.searchBox {
+  display:flex;
 }

@@ -1,14 +1,15 @@
 import React from 'react';
 import { Navbar, Nav} from 'react-bootstrap';
-import { Link } from 'react-router-dom';
 
 const Navigation = () => (
-  <Navbar className = "navbar">
-        <Nav>
-          <Nav.Link as={Link} to="/">Home</Nav.Link>
-          <Nav.Link as={Link} to="/pages/Info">Info</Nav.Link>
-        </Nav>
-  </Navbar>
+  <div className="navbar">
+    <Navbar>
+      <Nav>
+        <a href="/" className = "links">Home</a>
+        <a href="/pages/Info" className = "links">Info</a>
+      </Nav>
+    </Navbar>
+  </div>
 );
 
 export default Navigation;

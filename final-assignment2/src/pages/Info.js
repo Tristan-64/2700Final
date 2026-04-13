@@ -1,10 +1,9 @@
 import React from 'react';
-import { Container } from 'react-bootstrap';
 
 const Info = () => (
-    <Container>
+    <div className= "infoScreen">
       <p>This is a database with Rick and Morty characters</p>
-    </Container>
+    </div>
 );
 
 export default Info;
