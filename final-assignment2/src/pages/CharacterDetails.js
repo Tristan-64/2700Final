@@ -26,7 +26,6 @@ const CharacterDetails = () => {
         <Card.Body>
           <Card.Title>{character.name}</Card.Title>
           <Card.Text>
-
               <ul>
                 <li>Status: {character.status}</li>
                 <li>Species: {character.species}</li>
